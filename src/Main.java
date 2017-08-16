@@ -1,5 +1,3 @@
-
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -19,7 +17,8 @@ public class Main {
 //        puntoDos();
 //        puntoTres();
 //        puntoCuatro();
-        puntoCinco();
+//        puntoCinco();
+        puntoSiete();
     }
 
     public static void puntoUno() {
@@ -38,7 +37,7 @@ public class Main {
             init += 1;
         }
 
-        System.out.println("result " + result);
+        System.out.println("result1 " + result);
     }
 
     /**
@@ -71,7 +70,7 @@ public class Main {
             impar = true;
             init += 1;
         }
-        System.out.println("result " + result);
+        System.out.println("result2 " + result);
     }
 
     public static void puntoTres() {
@@ -101,7 +100,7 @@ public class Main {
             par = true;
             init += 1;
         }
-        System.out.println("result " + result);
+        System.out.println("result3 " + result);
     }
 
     public static void puntoCuatro() {
@@ -128,7 +127,7 @@ public class Main {
             }
             init += 1;
         }
-        System.out.println("result " + result);
+        System.out.println("result4 " + result);
     }
 
     public static void puntoCinco() {
@@ -138,7 +137,7 @@ public class Main {
         int result = 0;
         double ultimaCifra = 0;
         double penultima = 0;
-        for (int i = 1; i <= c; i++) {
+        for (int i = 0; i <= c; i++) {
             ultimaCifra = init / 10;
             penultima = init / 100;
 
@@ -155,6 +154,36 @@ public class Main {
             }
             init += 1;
         }
-        System.out.println("result " + result);
+        System.out.println("result5 " + result);
     }
+
+    /*
+    *@Numero 6 = 81902
+     */
+    /**
+     * 16292
+     */
+    public static void puntoSiete() {
+        Integer init = 200000;
+        Integer fin = 400000;
+        Integer result = 0;
+        Integer numerosSiete = 0;
+        Integer numeroAux = 0;
+        while (init <= fin) {
+            numeroAux = 0;
+            numerosSiete = 0;
+            for(int i = 0; i< init.toString().length(); i++){
+                numeroAux = Integer.parseInt(init.toString().charAt(i)+"");
+                if(numeroAux == 7){
+                    numerosSiete += 1;
+                }
+            }
+            if(numerosSiete >= 2){
+                result += 1;
+            }
+            init += 1;
+        }
+        System.out.println("result7 " + result);
+    }
+
 }
