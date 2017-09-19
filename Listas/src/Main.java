@@ -28,6 +28,8 @@ public class Main {
         }
 
         System.out.println(s);
+        
+        LeeArchivo();
 //        GeneraArchivo();
 //        ArrayList<Nodo> Objetos = new ArrayList<>();
 //        LeeArchivo(Objetos);
@@ -94,7 +96,8 @@ public class Main {
 
     public static void GeneraArchivo() {
         System.out.println("Generando archivo...");
-        try (DataOutputStream ObjDato = new DataOutputStream(new FileOutputStream("D:\\Datos.dat"));) {
+        //try (DataOutputStream ObjDato = new DataOutputStream(new FileOutputStream("D:\\Datos.dat"));) {
+        try (DataOutputStream ObjDato = new DataOutputStream(new FileOutputStream("/Users/davidaristizabal/Universidad/Datos.dat"));) {
             int numA, numB;
             for (int cont = 1; cont <= 100000; cont++) {
                 numA = azar.nextInt(20000);
@@ -107,13 +110,12 @@ public class Main {
         }
     }
 
-    public static void LeeArchivo(ArrayList<Nodo> Objetos) {
+    public static void LeeArchivo() {
         System.out.println("Leyendo archivo...");
-        try (DataInputStream ObjDato = new DataInputStream(new FileInputStream("D:\\Datos.dat"));) {
+        //try (DataInputStream ObjDato = new DataInputStream(new FileInputStream("D:\\Datos.dat"));) {
+        try (DataInputStream ObjDato = new DataInputStream(new FileInputStream("/Users/davidaristizabal/Universidad/Datos.dat"));) {
             while (true) {
-                int numA = ObjDato.readInt();
-                int numB = ObjDato.readInt();
-                Objetos.add(new Nodo(numA, numB));
+                System.out.println("ObjDato >>>" + ObjDato.readLine());
             }
         } catch (IOException e) {
         }

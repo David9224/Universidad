@@ -2,3 +2,10 @@
 Taller1/
 
 *.zip
+/Listas/nbproject/private/
+/Listas/build/
+/Colas/nbproject/private/
+/Cine/nbproject/private/
+/Colas/build/
+/Circular/nbproject/private/
+/Circular/build/
